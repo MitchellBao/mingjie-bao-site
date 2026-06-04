@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(53, 185, 167, 0.08), transparent 320px),
+    #f7f4ef;
+  color: #171411;
+}
+
+.dark body {
+  background:
+    linear-gradient(180deg, rgba(53, 185, 167, 0.08), transparent 320px),
+    #171411;
+  color: #f7f4ef;
+}
+
+::selection {
+  background: rgba(53, 185, 167, 0.28);
+}
+
+.prose-archive {
+  color: inherit;
+}
+
+.prose-archive :where(h1, h2, h3) {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.prose-archive :where(h2) {
+  margin-top: 2.4rem;
+  font-size: 1.55rem;
+}
+
+.prose-archive :where(h3) {
+  margin-top: 1.8rem;
+  font-size: 1.15rem;
+}
+
+.prose-archive :where(p, li) {
+  color: rgb(45 41 36 / 0.82);
+  line-height: 1.8;
+}
+
+.dark .prose-archive :where(p, li) {
+  color: rgb(247 244 239 / 0.78);
+}
+
+.prose-archive :where(a) {
+  color: #14766d;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.dark .prose-archive :where(a) {
+  color: #35b9a7;
+}
+
+.prose-archive :where(blockquote) {
+  border-left: 2px solid #35b9a7;
+  margin-left: 0;
+  padding-left: 1rem;
+  color: rgb(45 41 36 / 0.75);
+}
+
+.dark .prose-archive :where(blockquote) {
+  color: rgb(247 244 239 / 0.7);
+}

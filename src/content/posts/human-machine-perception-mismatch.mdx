@@ -1,0 +1,18 @@
+---
+title: "Notes on Human-Machine Perception Mismatch"
+date: "2026-05-24"
+description: "Short notes on perception mismatch as a security boundary in audio, vision, and human-computer interaction."
+category: "Research Notes"
+tags: ["Security", "Audio CAPTCHA", "Adversarial Audio", "Research Notes"]
+draft: false
+---
+
+Security systems sometimes depend on a gap between what humans can perceive and what machines can classify. CAPTCHAs are the obvious example, but the broader pattern appears in content moderation, biometric authentication, watermarking, and adversarial examples.
+
+The phrase "human-machine perception mismatch" is useful because it avoids treating either side as a fixed standard. Human perception is variable, situated, trained, fatigued, and embodied. Machine perception is also plural: a narrow ASR model, a multimodal foundation model, and a specialized classifier may fail in different ways.
+
+## Why This Matters
+
+When a system assumes that noise is hard for machines but tolerable for humans, the assumption should be revisited whenever model capabilities change. Large audio-language models may not perceive sound like humans, but they may still become good enough at the task that the old boundary stops being protective.
+
+The practical question is not whether machines "hear like us." It is whether their errors remain different enough to preserve the security property.

@@ -1,0 +1,21 @@
+---
+title: "Why Security Evaluation Becomes Harder with Generalist Models"
+date: "2026-05-20"
+description: "A technical note on why generalist AI systems make threat modeling and benchmark design less stable."
+category: "Technical Notes"
+tags: ["AI Safety", "Security", "Machine Learning", "Systems"]
+draft: false
+---
+
+Generalist models weaken neat evaluation boundaries. A narrow model usually has a narrow interface: classify this image, transcribe this audio, rank these documents. A generalist model can often transform a task into a chain of subtasks and use context to recover from partial uncertainty.
+
+For security evaluation, this means benchmarks need to account for behavior at the system level. A model might fail a low-level recognition step while still solving the high-level task through format inference, prior knowledge, or reasoning over noisy evidence.
+
+## Evaluation Implications
+
+- Measure task success, not only component accuracy.
+- Document prompts, decoding settings, model versions, and retries.
+- Treat the attacker workflow as part of the system under evaluation.
+- Look for leakage through predictable formats, filenames, metadata, or instructions.
+
+The older benchmark question was often "Can the model do X?" The newer question is closer to "Can a capable user make the model help with X under realistic constraints?"

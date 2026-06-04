@@ -1,0 +1,25 @@
+---
+title: "Audio CAPTCHAs in the Era of Large Audio-Language Models"
+date: "2026-05-28"
+description: "A preliminary research note on why generalist audio-language models may change the threat model for audio CAPTCHA systems."
+category: "Research Notes"
+tags: ["AI Safety", "Audio CAPTCHA", "Security", "Machine Learning"]
+draft: false
+---
+
+Audio CAPTCHAs historically rely on an asymmetry between human auditory perception and automated speech recognition. A challenge can be noisy, distorted, segmented, or semantically awkward, while still remaining usable for many human listeners.
+
+Large audio-language models complicate that assumption. They can combine transcription, acoustic scene understanding, instruction following, and lightweight reasoning in a single interface. This makes the relevant attack surface broader than the classic question of whether an ASR system can produce the right transcript.
+
+## Working Hypothesis
+
+The security of an audio CAPTCHA should be evaluated as an end-to-end task. If a model can listen to the audio, infer the likely challenge format, reason over uncertainty, and output the expected answer, then transcription accuracy alone is not enough to describe the risk.
+
+## Questions
+
+- How much does zero-shot prompting improve attack success?
+- Which distortions still separate human recognition from model recognition?
+- Do models exploit regularities in challenge generation?
+- How should evaluation account for accessibility and usability constraints?
+
+This note will become a longer research page once the experiment design is stable.
